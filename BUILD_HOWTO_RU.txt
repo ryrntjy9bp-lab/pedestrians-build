@@ -1,0 +1,16 @@
+КАК ПОЛУЧИТЬ ГОТОВЫЙ pedestrians.so (GLIBC 2.17, Linux 32-bit)
+
+1. Создай новый пустой репозиторий на GitHub.
+2. Загрузи ВСЕ файлы из этого архива в корень репозитория (включая .github).
+3. Открой вкладку Actions.
+4. Выбери: Build pedestrians GLIBC 2.17.
+5. Нажми Run workflow -> Run workflow.
+6. После завершения открой запуск и внизу скачай Artifact:
+   pedestrians-direction-fix-glibc217
+7. Внутри будет pedestrians.so.
+8. Замени на хостинге plugins/pedestrians.so и полностью перезапусти сервер.
+
+ПРОВЕРКА В ЛОГЕ:
+[Pedestrians] DirectionSync FIX enabled: spawn-facing + turn restream + 60ms movement
+
+Эта сборка делается в manylinux2014_i686 (GLIBC 2.17), поэтому не должна требовать GLIBC_2.33.
